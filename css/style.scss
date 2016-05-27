@@ -1,0 +1,109 @@
+
+$maincolor: #282B30;
+
+$fontColorMain: #F9F9F9;
+$fontColorSecond: #B54343;
+
+$fontBold: 'ubuntobold', sans-serif;
+$fontRegular: 'ubunturegular', sans-serif;
+$fontItalic: 'ubuntuitalic', sans-serif;
+
+@mixin transitionEffects($style, $effect, $speed) {
+    transition: $style $effect, $speed;
+    -webkit-transition: $style $effect, $speed;
+    -moz-transition: $style $effect, $speed;
+}
+@mixin transitionDelay($time) {
+    transition-delay: $time;
+    -webkit-transition-delay: $time;
+    -moz-transition-delay: $time;
+}
+
+@import "fonts.css";
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+
+
+body{
+    background: #282B30;
+}
+
+h1,p{
+    color: $fontColorMain;
+}
+
+
+.wrapper{
+    position: relative;
+}
+
+.welcome-section{
+    width: 625px;
+    margin: auto;
+    padding-top: 150px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+
+    @media screen and (max-width: 767px){
+        width: 100%;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    h1{
+        font-family: $fontBold;
+        font-size: 35px;
+        line-height: 49px;
+        // opacity: 0;
+        // text-align: left;
+        // position: absolute;
+        // top: 250px;
+        // left: 0;
+        // @include transitionEffects(all, ease-in, 4s);
+        // @include transitionDelay(1.8s);
+    }
+    p{
+        font-family: $fontRegular;
+        font-size: 18px;
+        line-height: 24px;
+        // @include transitionEffects(all, linear, 4s);
+
+        &.intro-description{
+            margin-bottom: 50px;
+            // opacity: 0;
+            // text-align: left;
+            // position: absolute;
+            // top: 300px;
+            // left: 0;
+            // @include transitionDelay(1.8s);
+        }
+
+
+        &.underconstruction{
+            font-size: 40px;
+            line-height: 58px;
+            color: $fontColorSecond;
+            // margin-top: 0;
+            // opacity: 0;
+            // @include transitionDelay(3s);
+        }
+    }
+
+    &.start{
+        .intro-description{
+            opacity: 1;
+            left: 141px;
+            text-align: center;
+        }
+        .intro-header{
+            opacity: 1;
+            text-align: center;
+            left: 117px;
+        }
+        .underconstruction{
+            opacity: 1;
+            margin-top: 140px;
+        }
+    }
+}
