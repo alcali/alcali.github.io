@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1,width=device-width">
+        <meta charset="utf-8">
+        <title>Hain Philippine Cuisine</title>
+
+        <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="css/style.min.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="css/menu.min.css" media="screen" title="no title" charset="utf-8">
+
+        <script src="js/jquery.js" charset="utf-8"></script>
+        <script src="js/bootstrap.min.js" charset="utf-8"></script>
+        <script type="text/javascript">
+            (function($){
+                $(document).ready(function(){
+                    var windowHt = $(window).innerHeight();
+                    $(".full-height").css("height", windowHt+"px");
+
+                    $('.wrapper').find('.section-text').each(function(){
+                        var sectionText = $(this).find("div").innerHeight();
+                        var sectionTxtPadding = (windowHt - sectionText) / 2;
+                        $(this).css({"padding-top": sectionTxtPadding+"px", "padding-bottom": sectionTxtPadding+"px"});
+                    });
+
+                    var logoImg = $('.banner .logo-container img').height();
+                    var logoContainerPadding = (windowHt - logoImg) / 2;
+                    $('.banner .logo-container').css({"padding-top" : logoContainerPadding+"px", "padding-bottom" : logoContainerPadding+"px"});
+
+                    $('#scrolldown').click(function(){
+                        var section1 = $('.section1').offset().top;
+                        $('html, body').animate({scrollTop: section1}, 800);
+                    });
+                });
+
+                $(window).resize(function(){
+                    var windowHt = $(window).innerHeight();
+                    $(".full-height").css("height", windowHt+"px");
+
+                    $('.wrapper').find('.section-text').each(function(){
+                        var sectionText = $(this).find("div").innerHeight();
+                        var sectionTxtPadding = (windowHt - sectionText) / 2;
+                        $(this).css({"padding-top": sectionTxtPadding+"px", "padding-bottom": sectionTxtPadding+"px"});
+                    });
+
+                    var logoImg = $('.banner .logo-container img').height();
+                    var logoContainerPadding = (windowHt - logoImg) / 2;
+                    $('.banner .logo-container').css({"padding-top" : logoContainerPadding+"px", "padding-bottom" : logoContainerPadding+"px"});
+                });
+            })(jQuery);
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <section class="navbar navbar-default header">
+                <div class="container-fluid header-container">
+                    <div class="navbar-header logo-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="#">
+                            <img src="img/logo.png" alt="" />
+                        </a>
+                    </div>
+                    <nav class="collapse navbar-collapse nav-header" id="main-nav">
+                        <ul class="nav nabar-nav">
+                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CUISINE <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Luzon</a></li>
+                                    <li><a href="#">Visayas</a></li>
+                                    <li><a href="#">Mindanao</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">ABOUT</a></li>
+                            <li><a href="#">CONTACT</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+            <section class="banner full-height">
+                <div class="logo-container">
+                    <img src="img/logo.png" alt="" />
+                </div>
+                <div class="scrolldown-container">
+                    <p>Scroll down</p>
+                    <img src="img/scrolldown-icon.png" alt="" id="scrolldown"/>
+                </div>
+            </section>
+            <section class="section1 full-height">
+                <div class="section-text">
+                    <div class="">
+                        <h2>Kumain ka na ba?</h2>
+                        <p class="english-translate">Have you eaten?</p>
+                        <hr>
+                        <p class="text-description">
+                            Experience Philippine Cuisine's richness flavor as we take you throught its raw and authentic dishes.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="section2 full-height">
+                <div class="section-text">
+                    <div>
+                        <h2>Pagkaing Pilipino</h2>
+                        <p class="english-translate">Our food is influenced by various cultures.</p>
+                        <hr>
+                        <p class="text-description">
+                        It consists of Malay Matrix, influenced by China and India by trade, Arabia by Islamization, Spanish and American through Conolization, and modern global communication.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="section3 full-height">
+                <div class="section-text">
+                    <div class="">
+                        <h2>Aming Pagkain</h2>
+                        <p class="english-translate">
+                            Our food
+                        </p>
+                        <hr />
+                        <p class="text-description">
+                            Philippine Cuisine is diverse. Many colonizers greatly influenced the country’s cuisine. And, there are many subcultures in the Philippines. Each subculture has its own specialties and way of cooking adapted from various cultues. Discover the dishes of 3 main island groups of the country.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="cuisine-location luzon">
+                <div class="cuisine-loc-container">
+                        <h2>LUZON</h2>
+                        <hr />
+                        <div class="cuisine-loc-details">
+                            <p>
+                                The Northern Island Group<br />
+                                The Mainland of  the Philippines.
+                            </p>
+                            <a href="#">
+                                DISCOVER
+                            </a>
+                        </div>
+                </div>
+            </section>
+            <section class="cuisine-location visayas">
+                <div class="cuisine-loc-container">
+                        <h2>VISAYAS</h2>
+                        <hr />
+                        <div class="cuisine-loc-details">
+                            <p>
+                                The Central Island Group<br />
+                                The Ethnic Islands of the Philippines.
+                            </p>
+                            <a href="#">
+                                DISCOVER
+                            </a>
+                        </div>
+                </div>
+            </section>
+            <section class="cuisine-location mindanao">
+                <div class="cuisine-loc-container">
+                        <h2>MINDANAO</h2>
+                        <hr />
+                        <div class="cuisine-loc-details">
+                            <p>
+                                The Southern Island Group<br />
+                                The Food Basket of the Philippines.
+                            </p>
+                            <a href="#">
+                                DISCOVER
+                            </a>
+                        </div>
+                </div>
+            </section>
+            <section class="footer">
+                <footer>
+                    <h4>HAIN INC.</h4>
+                    <p>
+                        DESIGNED BY BRENT L. GUZMAN
+                    </p>
+                </footer>
+            </section>
+        </div>
+    </body>
+</html>

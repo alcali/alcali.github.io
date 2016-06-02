@@ -1,0 +1,225 @@
+@import url(fonts.css);
+
+$white: #ffffff;
+$black: #000000;
+$brown: #9F7132;
+$lightbrown: #9D8264;
+$gray: #757575;
+
+$playfairitalic: 'playfair_displayitalic', sans-serif;
+$playfair: 'playfair_displayregular', sans-serif;
+$playfairbold: 'playfair_displaybold', sans-serif;
+$raleway:'ralewayregular', sans-serif;
+$ralewaiyitalic:'ralewayitalic', sans-serif;
+$ralewaybold: 'ralewaybold', sans-serif;
+
+@mixin transitionEffect($type, $effect, $speed) {
+    transition: $type $effect $speed;
+    -webkit-transition: $type $effect $speed;
+    -moz-transition: $type $effect $speed;
+}
+
+@mixin animation($keyframe, $duration, $length) {
+    -webkit-animation: $keyframe $duration $length;
+    animation: $keyframe $duration $length;
+}
+@mixin borderRadius($size) {
+    border-radius: $size;
+    -webkit-border-radius: $size;
+    -moz-border-radius: $size;
+}
+@mixin boxShadow($x, $y, $blur, $spread, $color) {
+    box-shadow: $x $y $blur $spread $color;
+    -webkit-box-shadow: $x $y $blur $spread $color;
+    -moz-box-shadow: $x $y $blur $spread $color;
+}
+
+.cuisine-container{
+    padding-top: 145px;
+
+    .cuisine-jumb{
+        margin: auto;
+        width: 992px;
+        padding-left: 1px;
+
+        @media screen and (max-width: 767px){
+            width: 100%;
+        }
+    }
+
+    .cuisine-nav{
+        float: left;
+        width: 250px;
+
+        @media screen and (max-width: 767px){
+            float: none;
+            width: 93%;
+            margin: auto;
+        }
+        h1{
+            font-size: 52px;
+            font-family: $ralewaybold;
+            color: $brown;
+            margin-bottom: 20px;
+        }
+        ul{
+            padding-left: 19px;
+            li{
+                list-style: none;
+                padding: 10px;
+
+                a{
+                    color: $lightbrown;
+                    font-size: 18px;
+                    font-family: $playfair;
+                }
+            }
+        }
+    }
+    .cuisine-gallery{
+        float: left;
+        width: 741px;
+        /* height: 720px; */
+        padding: 20px;
+        @include borderRadius(6px);
+        @include boxShadow(0, 0, 8px, 0, rgba(0,0,0,0.3));
+        margin-bottom: 50px;
+
+            @media screen and (max-width: 767px){
+                width: 93%;
+                float: none;
+                margin: auto;
+                margin-right: 30px;
+            }
+
+        .gallery-description{
+            margin-bottom: 16px;
+            h2{
+                font-family: $raleway;
+                font-size: 45px;
+                color: $gray;
+                margin-bottom: 8px;
+            }
+            p{
+                font-size: 16px;
+                font-family: $raleway;
+                color: $gray;
+                margin-bottom: 4px;
+            }
+        }
+
+        .gallery-img{
+            width: 100%;
+            height: 550px;
+            position: relative;
+            margin-bottom: 10px;
+
+            @media screen and (max-width: 767px){
+                height: 290px;
+            }
+
+            .items{
+                width: 100%;
+                height: 550px;
+                position: absolute;
+                // display: none;
+                opacity: 0;
+                @include transitionEffect(opacity, linear, 300ms);
+                // display: inline-block;
+
+                @media screen and (max-width: 767px){
+                    padding-top: 0 !important;
+                    padding-bottom: 0 !important;
+                    height: 100%;
+
+                    img{
+                        height: auto !important;
+
+                        &.landscape{
+                            height: 100% !important;
+                            width: auto !important;
+                        }
+                        &.portrait{
+                            height: 100% !important;
+                            width: auto !important;
+                        }
+                    }
+                }
+
+                img{
+                    display: block;
+                    margin: 0 auto;
+
+                    &.landscape{
+                        height: 465px;
+                    }
+                }
+                &.show{
+                    // display: block;
+                    opacity: 1;
+                }
+            }
+        }
+
+        .gallery-thumbnail{
+            width: 700px;
+            height: 90px;
+            margin-bottom: 6px;
+
+            @media screen and (max-width: 767px){
+                display: none;
+            }
+
+            .items{
+                width: 90px;
+                height: 90px;
+                display: inline-block;
+                cursor: pointer;
+
+                img{
+                    display: block;
+                    margin: auto;
+
+                    &.landscape{
+                        height: 100px;
+                    }
+                }
+            }
+        }
+
+        .gallery-arrows{
+            display: none;
+            width: 104px;
+            height: 34px;
+            margin: auto;
+
+            @media screen and (max-width: 767px){
+                display: block;
+            }
+
+            .arrows{
+                float: left;
+                margin: 0 6px;
+                button{
+                    // width: 30px;
+                    // height: 30px;
+                    background: $white;
+                    border: 1px solid $gray;
+                    @include borderRadius(0px);
+                    text-align: center;
+
+                    &:hover{
+                        background: lighten($gray, 40%);
+                    }
+                }
+            }
+        }
+    }
+    .landscape{
+        width: 100%;
+    }
+    .portrait{
+        height: 100%;
+        width: auto;
+    }
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1,width=device-width">
+        <meta charset="utf-8">
+        <title>Hain Philippine Cuisine</title>
+
+        <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="css/style.min.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="css/menu.min.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="css/cuisine.min.css" media="screen" title="no title" charset="utf-8">
+
+        <script src="js/jquery.js" charset="utf-8"></script>
+        <script src="js/bootstrap.min.js" charset="utf-8"></script>
+        <script type="text/javascript">
+            (function($){
+                $(document).ready(function(){
+                    $('.gallery-img').find('.items-landscape').each(function(){
+                        var galleryImgHt = $(this).find("img").height();
+                        console.log(galleryImgHt);
+                        var galleryItemPadding = (550 - galleryImgHt) / 2;
+                        $(this).css({"padding-top": galleryItemPadding+"px", "padding-bottom": galleryItemPadding+"px"});
+
+                    });
+                    $(".gallery-thumbnail .items").click(function(){
+                        var getTarget = $(this).attr("data-img");
+
+                        // $(".gallery-img .items").fadeOut(1000);
+                        $(".gallery-img .items").toggleClass("show", false);
+                        // $(getTarget).fadeOut(1000);
+                        $(getTarget).toggleClass("show");
+                    });
+                    $(".arrow-prev button").click(function(){
+                        var getParent = $(this).attr("data-parent");
+                        // console.log(getParent);
+                        prevGallery(getParent);
+                    });
+
+                    $(".arrow-next button").click(function(){
+                        var getParent = $(this).attr("data-parent");
+                        nextGallery(getParent);
+                    });
+                });
+
+                $(window).resize(function(){
+                    $('.gallery-img').find('.items-landscape').each(function(){
+                        var galleryImgHt = $(this).find("img").height();
+                        console.log(galleryImgHt);
+                        var galleryItemPadding = (550 - galleryImgHt) / 2;
+                        $(this).css({"padding-top": galleryItemPadding+"px", "padding-bottom": galleryItemPadding+"px"});
+
+                    });
+                });
+
+                    function prevGallery(parentId){
+                        var parentName = $("#"+parentId).attr("data-name");
+                        var getShowNum = $("#"+parentId).find(".gallery-img .show").attr("data-num");
+                        var parentChildLength = $("#"+parentId).find(".gallery-img").children().length;
+
+                        $("#"+parentId).find(".gallery-img .items").each(function(){
+                            $(this).toggleClass("show", false);
+                        });
+                        if(getShowNum == 1){
+                            var imgId = "#"+parentName+parentChildLength;
+                        }
+                        else{
+                            var imgId = "#"+parentName+(parseInt(getShowNum)-1);
+                        }
+                        $(imgId).toggleClass("show");
+
+                    }
+
+                    function nextGallery(parentId){
+                        var parentName = $("#"+parentId).attr("data-name");
+                        var getShowNum = $("#"+parentId).find(".gallery-img .show").attr("data-num");
+                        var parentChildLength = $("#"+parentId).find(".gallery-img").children().length;
+
+                        $("#"+parentId).find(".gallery-img .items").each(function(){
+                            $(this).toggleClass("show", false);
+                        });
+                        if(getShowNum == parentChildLength){
+                            var imgId = "#"+parentName+"1";
+                        }
+                        else{
+                            var imgId = "#"+parentName+(parseInt(getShowNum)+1);
+                        }
+                        console.log(imgId);
+                        $(imgId).toggleClass("show");
+
+                    }
+            })(jQuery);
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <section class="navbar navbar-default header">
+                <div class="container-fluid header-container">
+                    <div class="navbar-header logo-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="#">
+                            <img src="img/logo.png" alt="" />
+                        </a>
+                    </div>
+                    <nav class="collapse navbar-collapse nav-header" id="main-nav">
+                        <ul class="nav nabar-nav">
+                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CUISINE <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Luzon</a></li>
+                                    <li><a href="#">Visayas</a></li>
+                                    <li><a href="#">Mindanao</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">ABOUT</a></li>
+                            <li><a href="#">CONTACT</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+            <section class="cuisine-container">
+                <div class="cuisine-jumb">
+                    <div class="cuisine-nav">
+                        <h1>Luzon</h1>
+                        <ul>
+                            <li><a href="#gallery-bulalo">Bulalo</a></li>
+                            <li><a href="#crispy-pata">Crispy pata</a></li>
+                            <li><a href="#kare-kare">Kare-kare</a></li>
+                            <li><a href="#gallery-ltb">Lugaw tokwa't baboy</a></li>
+                            <li><a href="#gallery-sisig">Sisig</a></li>
+                        </ul>
+                    </div>
+                    <div class="cuisine-gallery">
+                        <!-- bulalo -->
+                        <div class="gallery-body" id="gallery-bulalo" data-name="bulalo">
+                            <div class="gallery-description">
+                                <h2>Bulalo</h2>
+                                <p>
+                                    Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Phasellus ullamcorper ipsum rutrum nunc.
+                                </p>
+                            </div>
+                            <div class="gallery-img">
+                                <div class="items items-landscape show" id="bulalo1" data-num="1">
+                                        <img src="img/cuisines/luzon/bulaloTrad1.jpg" id="bull" class="landscape" alt="" />
+                                </div>
+                                <div class="items" id="bulalo2" data-num="2">
+                                        <img src="img/cuisines/luzon/bulaloTrad2.jpg" class="portrait" alt="" />
+                                </div>
+                                <div class="items items-landscape" id="bulalo3" data-num="3">
+                                        <img src="img/cuisines/luzon/bulaloRaw.jpg" class="landscape" alt="" />
+                                </div>
+                                <div class="items" id="bulalo4" data-num="4">
+                                        <img src="img/cuisines/luzon/bulalo.jpg" class="portrait" alt="" />
+                                </div>
+                            </div>
+                            <div class="gallery-thumbnail">
+                                <div class="items items-landscape" style="background-image: url(img/cuisines/luzon/bulaloTrad1.jpg);background-size:cover;" data-img="#bulalo1">
+                                </div>
+                                <div class="items" style="background-image: url(img/cuisines/luzon/bulaloTrad2.jpg);background-size:cover;" data-img="#bulalo2">
+                                </div>
+                                <div class="items items-landscape" style="background-image: url(img/cuisines/luzon/bulaloRaw.jpg);background-size:cover;" data-img="#bulalo3">
+                                </div>
+                                <div class="items" style="background-image: url(img/cuisines/luzon/bulalo.jpg);background-size:cover;" data-img="#bulalo4">
+                                </div>
+                            </div>
+                            <div class="gallery-arrows">
+                                <div class="arrows arrow-prev">
+                                    <button type="button" class="btn btn-default" aria-label="Left Align" data-parent="gallery-bulalo">
+                                        <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                <div class="arrows arrow-next">
+                                    <button type="button" class="btn btn-default" aria-label="Left Align" data-parent="gallery-bulalo">
+                                        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end bulalo -->
+                    <!-- crispy pata -->
+                    <div class="gallery-body" id="gallery-bulalo" data-name="bulalo">
+                        <div class="gallery-description">
+                            <h2>Bulalo</h2>
+                            <p>
+                                Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Phasellus ullamcorper ipsum rutrum nunc.
+                            </p>
+                        </div>
+                        <div class="gallery-img">
+                            <div class="items items-landscape show" id="bulalo1" data-num="1">
+                                    <img src="img/cuisines/luzon/bulaloTrad1.jpg" id="bull" class="landscape" alt="" />
+                            </div>
+                            <div class="items" id="bulalo2" data-num="2">
+                                    <img src="img/cuisines/luzon/bulaloTrad2.jpg" class="portrait" alt="" />
+                            </div>
+                            <div class="items items-landscape" id="bulalo3" data-num="3">
+                                    <img src="img/cuisines/luzon/bulaloRaw.jpg" class="landscape" alt="" />
+                            </div>
+                            <div class="items" id="bulalo4" data-num="4">
+                                    <img src="img/cuisines/luzon/bulalo.jpg" class="portrait" alt="" />
+                            </div>
+                        </div>
+                        <div class="gallery-thumbnail">
+                            <div class="items items-landscape" style="background-image: url(img/cuisines/luzon/bulaloTrad1.jpg);background-size:cover;" data-img="#bulalo1">
+                            </div>
+                            <div class="items" style="background-image: url(img/cuisines/luzon/bulaloTrad2.jpg);background-size:cover;" data-img="#bulalo2">
+                            </div>
+                            <div class="items items-landscape" style="background-image: url(img/cuisines/luzon/bulaloRaw.jpg);background-size:cover;" data-img="#bulalo3">
+                            </div>
+                            <div class="items" style="background-image: url(img/cuisines/luzon/bulalo.jpg);background-size:cover;" data-img="#bulalo4">
+                            </div>
+                        </div>
+                        <div class="gallery-arrows">
+                            <div class="arrows arrow-prev">
+                                <button type="button" class="btn btn-default" aria-label="Left Align" data-parent="gallery-bulalo">
+                                    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                            <div class="arrows arrow-next">
+                                <button type="button" class="btn btn-default" aria-label="Left Align" data-parent="gallery-bulalo">
+                                    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- end crispy pata -->
+
+                    <div class="clear">
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

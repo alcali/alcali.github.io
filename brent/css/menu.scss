@@ -1,0 +1,92 @@
+$white: #ffffff;
+$black: #000000;
+$brown: #9F7132;
+$lightbrown: #9D8264;
+$gray: #757575;
+
+$playfairitalic: 'playfair_displayitalic', sans-serif;
+$playfair: 'playfair_displayregular', sans-serif;
+$playfairbold: 'playfair_displaybold', sans-serif;
+$raleway:'ralewayregular', sans-serif;
+$ralewaiyitalic:'ralewayitalic', sans-serif;
+$ralewaybold: 'ralewaybold', sans-serif;
+
+@mixin transitionEffect($type, $effect, $speed) {
+    transition: $type $effect $speed;
+    -webkit-transition: $type $effect $speed;
+    -moz-transition: $type $effect $speed;
+}
+
+@mixin animation($keyframe, $duration, $length) {
+    -webkit-animation: $keyframe $duration $length;
+    animation: $keyframe $duration $length;
+}
+@mixin borderRadius($size) {
+    border-radius: $size;
+    -webkit-border-radius: $size;
+    -moz-border-radius: $size;
+}
+
+.header{
+    position: fixed;
+    height: 105px;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    border: 0;
+    @include borderRadius(0px);
+    z-index: 9;
+    margin-bottom: 0;
+
+    .header-container{
+        padding: 0 20px;
+
+        .logo-header{
+            padding: 15px 0;
+            float: left;
+
+            img{
+                height: 72px;
+                width: auto
+            }
+
+            @media screen and (max-width: 767px) {
+                width: 100%;
+            }
+        }
+
+        .nav-header{
+            float: right;
+
+            ul{
+                li{
+                    float: left;
+                    font-family: $ralewaybold;
+                    color: $brown;
+                    font-size: 18px;
+                    padding: 42px 40px;
+                    a{
+                        font-family: $ralewaybold;
+                        color: $brown;
+                        text-decoration: none;
+                        text-align: center;
+
+                        &:hover{
+                            background: rgba(0,0,0,0);
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width: 767px) {
+                width: 100%;
+                background: rgba(0,0,0,0.4);
+                border: 0;
+
+                ul{
+                    li{
+                        float: none;
+                    }
+                }
+            }
+        }
+    }
+}
