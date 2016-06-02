@@ -23,6 +23,11 @@ $ralewaybold: 'ralewaybold', sans-serif;
     -webkit-animation: $keyframe $duration $length;
     animation: $keyframe $duration $length;
 }
+@mixin borderRadius($size) {
+    border-radius: $size;
+    -webkit-border-radius: $size;
+    -moz-border-radius: $size;
+}
 
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -96,6 +101,8 @@ a {
     width: 100%;
     background: rgba(0,0,0,0.7);
     border: 0;
+    @include borderRadius(0px);
+    z-index: 9;
 
     .header-container{
         padding: 0 20px;
@@ -139,7 +146,7 @@ a {
                 width: 100%;
                 background: rgba(0,0,0,0.4);
                 border: 0;
-                
+
                 ul{
                     li{
                         float: none;
@@ -208,6 +215,13 @@ a {
 
     }
 
+    @media screen and (max-width: 767px) {
+        width: 100% !important;
+        float: none !important;
+        padding-left: 35px !important;
+        padding-right: 35px !important;
+    }
+
 }
 
 .section1{
@@ -230,6 +244,13 @@ a {
         }
         .text-description{
             width: 500px;
+        }
+
+        @media screen and (max-width: 767px) {
+
+            .text-description{
+                width: 90%;
+            }
         }
     }
 }
@@ -366,6 +387,15 @@ a {
 
             &:hover{
                 background: $brown;
+            }
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .cuisine-loc-container{
+            padding: 84px 0;
+            .cuisine-loc-details{
+                opacity: 1;
             }
         }
     }
