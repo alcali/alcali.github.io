@@ -1,0 +1,297 @@
+@font-face {
+    font-family: 'robotobold';
+    src: url("../fonts/roboto-bold-webfont.eot");
+    src: url("../fonts/roboto-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-bold-webfont.woff2") format("woff2"), url("../fonts/roboto-bold-webfont.woff") format("woff"), url("../fonts/roboto-bold-webfont.ttf") format("truetype"), url("../fonts/roboto-bold-webfont.svg#robotobold") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotobold_italic';
+  src: url("../fonts/roboto-bolditalic-webfont.eot");
+  src: url("../fonts/roboto-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-bolditalic-webfont.woff2") format("woff2"), url("../fonts/roboto-bolditalic-webfont.woff") format("woff"), url("../fonts/roboto-bolditalic-webfont.ttf") format("truetype"), url("../fonts/roboto-bolditalic-webfont.svg#robotobold_italic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoitalic';
+  src: url("../fonts/roboto-italic-webfont.eot");
+  src: url("../fonts/roboto-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-italic-webfont.woff2") format("woff2"), url("../fonts/roboto-italic-webfont.woff") format("woff"), url("../fonts/roboto-italic-webfont.ttf") format("truetype"), url("../fonts/roboto-italic-webfont.svg#robotoitalic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoregular';
+  src: url("../fonts/roboto-regular-webfont.eot");
+  src: url("../fonts/roboto-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-regular-webfont.woff2") format("woff2"), url("../fonts/roboto-regular-webfont.woff") format("woff"), url("../fonts/roboto-regular-webfont.ttf") format("truetype"), url("../fonts/roboto-regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+html, body {
+    height: 100%;
+}
+
+a img {
+    border: none;
+}
+
+blockquote {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+body {
+    font-size: 26px;
+    font-size: 1rem;
+    line-height: 37.7px;
+    line-height: 1.45rem;
+}
+
+.wrapper .center-block {
+    width: 70%;
+}
+
+@media only screen and (max-width: 767px) {
+    .wrapper .center-block {
+        width: 90%;
+    }
+}
+
+.header {
+    height: 110px;
+    background-color: #ffffff;
+    width: 100%;
+    display: none;
+}
+
+.banner .banner-container {
+    background-image: url("../img/panelPlace-banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+
+@media only screen and (max-width: 767px) {
+    .banner .banner-container {
+        background: #1C95D4;
+        height: 320px;
+    }
+}
+
+.banner .banner-container h1 {
+    color: #000000;
+    font-size: 56px;
+    font-size: 2.15385rem;
+    line-height: 81.2px;
+    line-height: 3.12308rem;
+    font-family: 'robotoregular', sans-serif;
+    margin-bottom: 8px;
+}
+
+@media only screen and (max-width: 767px) {
+    .banner .banner-container h1 {
+        color: #ffffff;
+    }
+}
+
+.banner .banner-container p {
+    color: #1a1a1a;
+    font-size: 32px;
+    font-size: 1.23077rem;
+    line-height: 46.4px;
+    line-height: 1.78462rem;
+    font-family: 'robotoregular', sans-serif;
+}
+
+@media only screen and (max-width: 767px) {
+    .banner .banner-container p {
+        color: #ffffff;
+    }
+}
+
+.banner .banner-container .center-block {
+    padding: 194px 0;
+}
+
+@media only screen and (max-width: 767px) {
+    .banner .banner-container .center-block {
+        padding: 40px 0;
+    }
+}
+
+.banner .regForm {
+    height: 325px;
+    background-color: #ffffff;
+    position: relative;
+}
+
+@media only screen and (max-width: 767px) {
+    .banner .regForm {
+        height: 370px;
+    }
+}
+
+.banner .regForm .center-block {
+    position: relative;
+}
+
+@media only screen and (max-width: 767px) {
+    .banner .regForm .securityPartners {
+        width: 92%;
+        display: block;
+        top: 316px;
+        position: absolute;
+        left: 50%;
+        margin-left: -46%;
+    }
+}
+
+.banner .regForm .regForm-container {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 35px 10px;
+    margin-top: -60px;
+    position: absolute;
+    border-radius: 2px;
+    -ms-box-shadow: 0px 13px 37px -8px #c4c4c4;
+    box-shadow: 0px 13px 37px -8px #c4c4c4;
+}
+
+@media only screen and (max-width: 767px) {
+    .banner .regForm .regForm-container {
+        margin-top: -137px;
+    }
+}
+
+.banner .regForm .regForm-container .form-group label {
+    font-family: 'robotobold', sans-serif;
+    color: #8c8c8c;
+    font-size: 24px;
+    font-size: 0.92308rem;
+    line-height: 34.8px;
+    line-height: 1.33846rem;
+    margin-bottom: 5px;
+}
+
+.banner .regForm .regForm-container .form-group input, .banner .regForm .regForm-container .form-group select {
+    font-size: 26px;
+    font-size: 1rem;
+    line-height: 37.7px;
+    line-height: 1.45rem;
+    padding: 10px;
+    border-radius: 2px;
+    border: 1px solid #a6a6a6;
+    outline: none;
+    font-family: 'robotoregular', sans-serif;
+    height: 50px;
+}
+
+.banner .regForm .regForm-container .form-group input:focus, .banner .regForm .regForm-container .form-group select:focus {
+    outline: none;
+    -ms-box-shadow: none;
+    box-shadow: none;
+}
+
+@media only screen and (max-width: 767px) {
+    .banner .regForm .regForm-container .panelForm-Sec2 {
+        direction: rtl;
+    }
+}
+
+.banner .regForm .regForm-container .panelForm-Sec2 .terms-privacy {
+    color: #a6a6a6;
+    font-family: 'robotoitalic', sans-serif;
+    font-size: 20px;
+    font-size: 0.76923rem;
+    line-height: 29px;
+    line-height: 1.11538rem;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.banner .regForm .regForm-container .panelForm-Sec2 .terms-privacy a {
+    font-family: 'robotobold_italic', sans-serif;
+    color: #8c8c8c;
+}
+
+@media only screen and (max-width: 767px) {
+    .banner .regForm .regForm-container .panelForm-Sec2 .terms-privacy {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    .banner .regForm .regForm-container .panelForm-Sec2 .signUp-btn-container {
+        float: right !important;
+    }
+}
+
+.banner .regForm .regForm-container .panelForm-Sec2 .signUp-btn {
+    width: 100%;
+    background-color: #F69600;
+    color: #ffffff;
+    font-size: 31px;
+    font-size: 1.19231rem;
+    line-height: 44.95px;
+    line-height: 1.72885rem;
+    text-align: center;
+    padding: 15px;
+    border-radius: 4px;
+    font-family: 'robotoregular', sans-serif;
+    -ms-box-shadow: 0px 4px 0px 0px #c37700;
+    box-shadow: 0px 4px 0px 0px #c37700;
+    margin-bottom: 15px;
+}
+
+.banner .regForm .regForm-container .connectFB-btn {
+    border: 1px solid #0d4663;
+    border-radius: 4px;
+    color: #0d4663;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 15px;
+    font-family: 'robotoregular', sans-serif;
+    font-size: 26px;
+    font-size: 1rem;
+    line-height: 37.7px;
+    line-height: 1.45rem;
+}
