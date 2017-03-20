@@ -283,9 +283,9 @@ body {
 }
 
 .banner .regForm .regForm-container .connectFB-btn {
-    border: 1px solid #0d4663;
+    border: 1px solid #3B5998;
     border-radius: 4px;
-    color: #0d4663;
+    color: #3B5998;
     width: 100%;
     background-color: #ffffff;
     padding: 15px;
@@ -294,4 +294,27 @@ body {
     font-size: 1rem;
     line-height: 37.7px;
     line-height: 1.45rem;
+}
+
+.earnings-proof {
+    background-color: #e6e6e6;
+    padding: 15px 0;
+}
+
+.earnings-proof .trusted {
+    font-family: 'robotoregular', sans-serif;
+    font-size: 32px;
+    font-size: 1.23077rem;
+    line-height: 46.4px;
+    line-height: 1.78462rem;
+    color: #595959;
+}
+
+.earnings-proof .trusted strong {
+    font-family: 'robotobold', sans-serif;
+}
+
+.how-it-works {
+    padding: 15px 0;
+    background-color: #1C95D4;
 }
