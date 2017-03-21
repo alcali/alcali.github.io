@@ -318,3 +318,56 @@ body {
     padding: 15px 0;
     background-color: #1C95D4;
 }
+
+.how-it-works h2 {
+    color: #ffffff;
+    font-size: 56px;
+    font-size: 2.15385rem;
+    line-height: 81.2px;
+    line-height: 3.12308rem;
+    text-align: center;
+    font-family: 'robotoregular', sans-serif;
+}
+
+.how-it-works .steps-container ul li {
+    list-style: none;
+    margin-bottom: 80px;
+}
+
+.how-it-works .steps-container ul li div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.how-it-works .steps-container ul li div.steps-number {
+    font-family: 'robotoregular',sans-serif;
+    color: #ffffff;
+    font-size: 50px;
+    font-size: 1.92308rem;
+    line-height: 72.5px;
+    line-height: 2.78846rem;
+    padding: 8px 21px;
+    border-radius: 100%;
+    border: 1px solid #ffffff;
+    position: relative;
+}
+
+.how-it-works .steps-container ul li div.steps-number .line {
+    position: absolute;
+    bottom: -81px;
+    left: 50%;
+    margin-left: -0.5px;
+    height: 80px;
+    background-color: #ffffff;
+    width: 1px;
+}
+
+.how-it-works .steps-container ul li div.steps-desc {
+    font-family: 'robotoregular',sans-serif;
+    color: #ffffff;
+    font-size: 32px;
+    font-size: 1.23077rem;
+    line-height: 46.4px;
+    line-height: 1.78462rem;
+    padding: 0px 20px;
+}
