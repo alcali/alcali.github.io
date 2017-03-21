@@ -1,0 +1,24 @@
+.footer{
+  background-color: $white;
+
+  @include bp-xsmall{
+    .backToTop{
+      width: 100%;
+      display: block;
+      padding: 15px;
+      text-align: center;
+      background-color: $green;
+      font-family: 'robotoregular', sans-serif;
+      @include font-size(31px);
+      color: $white;
+    }
+    .copyright{
+      font-family: 'robotoregular', sans-serif;
+      @include font-size(24px);
+      color: $black;
+      text-align: center;
+      padding: 15px;
+    }
+  }
+
+}

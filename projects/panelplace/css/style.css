@@ -87,12 +87,18 @@ body {
 
 .wrapper .center-block {
     width: 70%;
+    min-width: 350px;
 }
 
 @media only screen and (max-width: 767px) {
     .wrapper .center-block {
         width: 90%;
     }
+}
+
+.wrapper .contents {
+    width: 100%;
+    position: relative;
 }
 
 .header {
@@ -315,7 +321,7 @@ body {
 }
 
 .how-it-works {
-    padding: 15px 0;
+    padding: 30px 0;
     background-color: #1C95D4;
 }
 
@@ -327,11 +333,21 @@ body {
     line-height: 3.12308rem;
     text-align: center;
     font-family: 'robotoregular', sans-serif;
+    margin-bottom: 40px;
+}
+
+.how-it-works .steps-container {
+    margin: auto;
+    width: 310px;
 }
 
 .how-it-works .steps-container ul li {
     list-style: none;
     margin-bottom: 80px;
+}
+
+.how-it-works .steps-container ul li:last-child {
+    margin-bottom: 40px;
 }
 
 .how-it-works .steps-container ul li div {
@@ -370,4 +386,140 @@ body {
     line-height: 46.4px;
     line-height: 1.78462rem;
     padding: 0px 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    .survey-companies .center-block {
+        padding: 60px 0;
+        padding-bottom: 45px;
+        position: relative;
+    }
+}
+
+.survey-companies .partner-numbers {
+    font-family: 'robotoregular', sans-serif;
+    font-size: 32px;
+    font-size: 1.23077rem;
+    line-height: 46.4px;
+    line-height: 1.78462rem;
+    color: #262626;
+    text-align: center;
+}
+
+.survey-companies .partner-numbers .numbers {
+    font-family: 'robotobold', sans-serif;
+    color: #1C95D4;
+    font-size: 120px;
+    font-size: 4.61538rem;
+    line-height: 174px;
+    line-height: 6.69231rem;
+}
+
+@media only screen and (max-width: 767px) {
+    .survey-companies .companies .img {
+        display: block;
+        position: absolute;
+    }
+
+    .survey-companies .companies .img.company1 {
+        bottom: 60px;
+        left: 0;
+        width: 58px;
+        height: auto;
+    }
+
+    .survey-companies .companies .img.company2 {
+        left: 16px;
+        top: 59px;
+        width: 85px;
+        height: auto;
+    }
+
+    .survey-companies .companies .img.company3 {
+        top: 28px;
+        width: 94px;
+        left: 50%;
+        margin-left: -47px;
+    }
+
+    .survey-companies .companies .img.company4 {
+        right: 8px;
+        top: 59px;
+        width: 96px;
+        height: auto;
+    }
+
+    .survey-companies .companies .img.company5 {
+        bottom: 67px;
+        right: 0;
+        width: 64px;
+        height: auto;
+    }
+}
+
+.benefits {
+    background-color: #1a1a1a;
+}
+
+@media only screen and (max-width: 767px) {
+    .benefits ul li {
+        padding: 15px 0;
+        border-bottom: 1px solid #737373;
+    }
+
+    .benefits ul li .image {
+        width: 30%;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .benefits ul li .image img {
+        width: 100%;
+        max-width: 100%;
+        display: block;
+    }
+
+    .benefits ul li .benefits-desc {
+        width: 70%;
+        display: table-cell;
+        vertical-align: middle;
+        color: #ffffff;
+        font-family: 'robotoregular', sans-serif;
+        font-size: 32px;
+        font-size: 1.23077rem;
+        line-height: 46.4px;
+        line-height: 1.78462rem;
+        padding-left: 20px;
+    }
+}
+
+.footer {
+    background-color: #ffffff;
+}
+
+@media only screen and (max-width: 767px) {
+    .footer .backToTop {
+        width: 100%;
+        display: block;
+        padding: 15px;
+        text-align: center;
+        background-color: #73CB44;
+        font-family: 'robotoregular', sans-serif;
+        font-size: 31px;
+        font-size: 1.19231rem;
+        line-height: 44.95px;
+        line-height: 1.72885rem;
+        color: #ffffff;
+    }
+
+    .footer .copyright {
+        font-family: 'robotoregular', sans-serif;
+        font-size: 24px;
+        font-size: 0.92308rem;
+        line-height: 34.8px;
+        line-height: 1.33846rem;
+        color: #000000;
+        text-align: center;
+        padding: 15px;
+    }
 }

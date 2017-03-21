@@ -1,0 +1,170 @@
+.banner{
+  .banner-container{
+    background-image: url('../img/panelPlace-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+
+    @include bp-xsmall{
+      background: $blue;
+      height: 320px;
+    }
+
+    h1{
+      color: $black;
+      @include font-size(56px);
+      font-family: 'robotoregular', sans-serif;
+      margin-bottom: 8px;
+
+      @include bp-xsmall{
+        color: $white;
+      }
+    }
+
+    p{
+      color: lighten($black, 10%);
+      @include font-size(32px);
+      font-family: 'robotoregular', sans-serif;
+
+      @include bp-xsmall{
+        color: $white;
+      }
+
+    }
+
+    .center-block{
+      padding: 194px 0;
+
+      @include bp-xsmall{
+        padding: 40px 0;
+      }
+
+    }
+
+  }
+
+  .regForm{
+    height: 325px;
+    background-color: $white;
+    position: relative;
+
+    @include bp-xsmall{
+      height: 370px;
+    }
+
+    .center-block{
+      position: relative;
+    }
+
+    .securityPartners{
+      @include bp-xsmall{
+        width: 92%;
+        display: block;
+        top: 316px;
+        position: absolute;
+        left: 50%;
+        margin-left: -46%;
+      }
+    }
+
+    .regForm-container{
+        background-color: $white;
+        width: 100%;
+        padding: 35px 10px;
+        margin-top: -60px;
+        position: absolute;
+        @include border-radius(2px);
+        @include box-shadow(0px 13px 37px -8px darken($white, 23%));
+
+        @include bp-xsmall{
+          margin-top: -137px;
+        }
+
+        .form-group{
+          label{
+            font-family: 'robotobold', sans-serif;
+            color: darken($white, 45%);
+            @include font-size(24px);
+            margin-bottom: 5px;
+          }
+
+          input{
+            @include font-size(26px);
+            padding: 10px;
+            @include border-radius(2px);
+            border: 1px solid darken($white, 35%);
+            outline: none;
+            font-family: 'robotoregular', sans-serif;
+            height: 50px;
+
+            &:focus{
+              outline: none;
+              @include box-shadow(none);
+            }
+          }
+
+          select{
+            @extend input;
+          }
+        }
+
+        .panelForm-Sec2{
+
+          @include bp-xsmall{
+            direction: rtl;
+          }
+
+
+          .terms-privacy{
+            color: darken($white, 35%);
+            font-family: 'robotoitalic', sans-serif;
+            @include font-size(20px);
+            text-align: left;
+            margin-bottom: 15px;
+
+            a{
+              font-family: 'robotobold_italic', sans-serif;
+              color: darken($white, 45%);
+            }
+
+            @include bp-xsmall{
+              text-align: center;
+            }
+
+          }
+          .signUp-btn-container{
+            @include bp-medium{
+              float: right !important;
+            }
+          }
+          .signUp-btn{
+            width: 100%;
+            background-color: $orange;
+            color: $white;
+            @include font-size(31px);
+            text-align: center;
+            padding: 15px;
+            @include border-radius(4px);
+            font-family: 'robotoregular', sans-serif;
+            @include box-shadow(0px 4px 0px 0px darken($orange, 10%));
+            margin-bottom: 15px;
+          }
+
+        }
+
+        .connectFB-btn{
+          border: 1px solid $fbColor;
+          @include border-radius(4px);
+          color: $fbColor;
+          width: 100%;
+          background-color: $white;
+          padding: 15px;
+          font-family: 'robotoregular', sans-serif;
+          @include font-size(26px);
+        }
+
+    }
+
+  }
+}

@@ -7,14 +7,16 @@
 
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
       <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+      <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+      <script type="text/javascript" src="js/jquery.min.js"></script>
 
   </head>
   <body>
     <div class="wrapper">
         <section class="header">
         </section>
-        <section class="banner">
+        <section class="contents banner">
           <div class="banner-container">
             <div class="center-block">
               <h1>Get paid from surveys</h1>
@@ -65,12 +67,12 @@
           </div>
         </div>
         </section>
-        <section  class="earnings-proof">
+        <section  class="contents earnings-proof">
           <div class="center-block">
             <p class="trusted">Trusted by <strong>958,656</strong> members across the world to earn rewards</p>
           </div>
         </section>
-        <section class="how-it-works">
+        <section class="contents how-it-works">
           <h2>How it works</h2>
           <div class="center-block">
             <div class="steps-container">
@@ -114,12 +116,75 @@
             </div>
           </div>
         </section>
-        <section class="block-5">
-
+        <section class="contents survey-companies">
+          <div class="center-block">
+            <p class="partner-numbers">
+              <span class="numbers">400+</span><br />
+              trusted survey panels
+            </p>
+            <div class="companies">
+              <img src="img/company1.png" class="img company1" alt="" />
+              <img src="img/company2.png" class="img company2" alt="" />
+              <img src="img/company3.png" class="img company3" alt="" />
+              <img src="img/company4.png" class="img company4" alt="" />
+              <img src="img/company5.png" class="img company5" alt="" />
+            </div>
+          </div>
         </section>
-        <section class="footer">
-
+        <section class="contents benefits">
+          <ul>
+            <li>
+              <div class="center-block">
+                <div class="image">
+                  <img src="img/benefits1.png" alt="">
+                </div>
+                <div class="benefits-desc">
+                  Improve efficiency in doing surveys
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="center-block">
+                <div class="image">
+                  <img src="img/benefits2.png" alt="">
+                </div>
+                <div class="benefits-desc">
+                  Be informed of new survey opportunities
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="center-block">
+                <div class="image">
+                  <img src="img/benefits3.png" alt="">
+                </div>
+                <div class="benefits-desc">
+                  Earn in many ways
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="contents footer">
+          <span href="#" class="btn backToTop">
+            <i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top
+          </span>
+          <p class="copyright">© 2008 - 2017 PanelPlace.com All Rights Reserved.</p>
         </section>
     </div>
+
+    <!-- scripts -->
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+
+        // back to top button
+        $(".backToTop").click(function(){
+          $('body, html').animate({scrollTop: 0}, 500);
+        })
+
+      });
+    </script>
+
   </body>
 </html>

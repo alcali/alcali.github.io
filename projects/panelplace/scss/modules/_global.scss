@@ -1,0 +1,22 @@
+body{
+  @include font-size($rootSize);
+}
+
+.wrapper{
+
+  .center-block{
+    width: 70%;
+    min-width: 350px;
+
+    @include bp-xsmall{
+      width: 90%;
+    }
+
+  }
+
+  .contents{
+    width: 100%;
+    position: relative;
+  }
+
+}
