@@ -18,6 +18,11 @@
   <body>
     <div class="wrapper">
         <section class="header">
+          <div class="center-block">
+            <div class="headerSignUp">
+              <span class="headerSignUpBtn">Sign up</span>
+            </div>
+          </div>
         </section>
         <section class="contents banner">
           <div class="banner-container">
@@ -261,11 +266,22 @@
               trusted survey panels
             </p>
             <div class="companies">
-              <img src="img/company1.png" class="img company1" alt="" />
-              <img src="img/company2.png" class="img company2" alt="" />
-              <img src="img/company3.png" class="img company3" alt="" />
-              <img src="img/company4.png" class="img company4" alt="" />
-              <img src="img/company5.png" class="img company5" alt="" />
+              <div class="img">
+                <img src="img/opinionsworld.gif" class="company1" alt="" />
+
+              </div>
+              <div class="img">
+                <img src="img/iSay.gif" class="company1" alt="" />
+              </div>
+              <div class="img">
+                <img src="img/toluna.gif" class="company1" alt="" />
+              </div>
+              <div class="img">
+                <img src="img/valuedopinions.gif" class="company1" alt="" />
+              </div>
+              <div class="img">
+                <img src="img/aip.gif" class="company1" alt="" />
+              </div>
             </div>
           </div>
         </section>
@@ -342,23 +358,70 @@
                 settings: {
                   slidesToShow: 1,
                   slidesToScroll: 1,
-                  centerMode: true
+                  centerMode: true,
+                  centerPadding: '25px'
                 }
               }
             ]
           });
+
+          $(".companies").slick({
+            dots: false,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 8000,
+            infinite: true,
+            centerMode: false,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            responsive: [
+              {
+                breakpoint: 767,
+                settings:{
+                  slidesToShow: 3
+                }
+              }
+            ]
+          });
+
         });
     </script>
     <script type="text/javascript">
       $(document).ready(function(){
+        var $w = $(window);
 
         // back to top button
-        $(".backToTop").click(function(){
+        $(".backToTop, .headerSignUpBtn").click(function(){
           $('body, html').animate({scrollTop: 0}, 500);
+        });
+
+        // display header on load when scroll greater than regform
+        displayHeader($(this).scrollTop());
+
+        // display header on scroll
+        $w.scroll(function(){
+          var scrollTop = $w.scrollTop();
+          displayHeader(scrollTop);
         });
 
 
       });
+
+      function displayHeader(scrollObj){
+        var scrollTop = scrollObj;
+        var $header = $(".header");
+        var $regForm = $(".regForm");
+        var regFormY = $regForm.offset().top,
+            regFormHeight = $regForm.height();
+
+        var ShouldDisplayHeader = scrollTop > (regFormY + regFormHeight);
+        if(ShouldDisplayHeader === true){
+          $(".header").addClass("active-show");
+        }
+        else{
+          $(".header").removeClass("active-show");
+        }
+      }
     </script>
 
   </body>

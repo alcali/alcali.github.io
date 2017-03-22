@@ -103,10 +103,50 @@ body {
 }
 
 .header {
-    height: 110px;
+    height: 70px;
     background-color: #ffffff;
     width: 100%;
-    display: none;
+    position: fixed;
+    top: -110px;
+    transition: all 300ms linear;
+    z-index: 999;
+    border: 0;
+}
+
+.header:before, .header:after {
+    content: " ";
+    display: table;
+}
+
+.header:after {
+    clear: both;
+}
+
+.header.active-show {
+    top: 0;
+}
+
+.header .headerSignUp {
+    float: right;
+}
+
+.header .headerSignUp .headerSignUpBtn {
+    background-color: #F69600;
+    color: #ffffff;
+    font-size: 35px;
+    font-size: 1.34615rem;
+    line-height: 50.75px;
+    line-height: 1.95192rem;
+    text-align: center;
+    padding: 20px 50px;
+    border-radius: 0;
+    font-family: 'robotoregular', sans-serif;
+    display: block;
+    cursor: pointer;
+}
+
+.header .headerSignUp .headerSignUpBtn:hover {
+    background-color: #e28a00;
 }
 
 .banner .banner-container {
@@ -307,6 +347,12 @@ body {
     line-height: 1.45rem;
 }
 
+@media only screen and (max-width: 767px) {
+    .banner .regForm .regForm-container .connectFB .security {
+        display: none;
+    }
+}
+
 .banner .regForm .regForm-container .connectFB .security ul li {
     width: 33%;
     display: table-cell;
@@ -380,7 +426,7 @@ body {
 .earnings-proof .earnings-proof-container .earning-item {
     width: 31.62393%;
     float: left;
-    margin-right: 0.3%;
+    margin: 0px 0.15%;
     border: 1px solid #d9d9d9;
     background-color: #ffffff;
 }
@@ -591,8 +637,7 @@ body {
 
 @media only screen and (max-width: 767px) {
     .survey-companies .center-block {
-        padding: 60px 0;
-        padding-bottom: 45px;
+        padding: 15px 0;
         position: relative;
     }
 }
@@ -605,6 +650,7 @@ body {
     line-height: 1.78462rem;
     color: #262626;
     text-align: center;
+    margin-bottom: 25px;
 }
 
 .survey-companies .partner-numbers .numbers {
@@ -616,45 +662,26 @@ body {
     line-height: 6.69231rem;
 }
 
+.survey-companies .companies {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.survey-companies .companies .img {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.survey-companies .companies .img img {
+    display: block;
+    max-width: 110px;
+    margin: auto;
+}
+
 @media only screen and (max-width: 767px) {
     .survey-companies .companies .img {
-        display: block;
-        position: absolute;
-    }
-
-    .survey-companies .companies .img.company1 {
-        bottom: 60px;
-        left: 0;
-        width: 58px;
-        height: auto;
-    }
-
-    .survey-companies .companies .img.company2 {
-        left: 16px;
-        top: 59px;
-        width: 85px;
-        height: auto;
-    }
-
-    .survey-companies .companies .img.company3 {
-        top: 28px;
-        width: 94px;
-        left: 50%;
-        margin-left: -47px;
-    }
-
-    .survey-companies .companies .img.company4 {
-        right: 8px;
-        top: 59px;
-        width: 96px;
-        height: auto;
-    }
-
-    .survey-companies .companies .img.company5 {
-        bottom: 67px;
-        right: 0;
-        width: 64px;
-        height: auto;
+        margin: 0 35px;
     }
 }
 
@@ -742,6 +769,15 @@ body {
 
 .footer {
     background-color: #ffffff;
+}
+
+.footer:before, .footer:after {
+    content: " ";
+    display: table;
+}
+
+.footer:after {
+    clear: both;
 }
 
 @media only screen and (max-width: 767px) {
