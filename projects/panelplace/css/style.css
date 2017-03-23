@@ -85,15 +85,19 @@ body {
     line-height: 1.45rem;
 }
 
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
 .center-block {
-    width: 70%;
-    min-width: 800px;
+    width: 80%;
 }
 
 @media only screen and (max-width: 767px) {
     .center-block {
         width: 90%;
-        min-width: 350px;
+        min-width: 300px;
     }
 }
 
@@ -206,14 +210,29 @@ body {
 }
 
 .banner .regForm {
-    height: 245px;
     background-color: #ffffff;
     position: relative;
 }
 
+.banner .regForm .center-block {
+    height: 245px;
+}
+
 @media only screen and (max-width: 767px) {
-    .banner .regForm {
-        height: 370px;
+    .banner .regForm .center-block {
+        height: 400px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .banner .regForm .center-block {
+        height: 490px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .banner .regForm .center-block {
+        height: 245px;
     }
 }
 
@@ -221,14 +240,57 @@ body {
     position: relative;
 }
 
+.banner .regForm .securityPartners {
+    width: 92%;
+    position: absolute;
+    left: 50%;
+    margin-left: -46%;
+}
+
+.banner .regForm .securityPartners ul {
+    display: table;
+    width: 100%;
+}
+
+.banner .regForm .securityPartners ul:before, .banner .regForm .securityPartners ul:after {
+    content: " ";
+    display: table;
+}
+
+.banner .regForm .securityPartners ul:after {
+    clear: both;
+}
+
+.banner .regForm .securityPartners ul li {
+    width: 33.3333%;
+    list-style: none;
+    padding: 0 10px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.banner .regForm .securityPartners ul li img {
+    max-width: 110px;
+}
+
 @media only screen and (max-width: 767px) {
     .banner .regForm .securityPartners {
-        width: 92%;
         display: block;
-        top: 316px;
-        position: absolute;
-        left: 50%;
-        margin-left: -46%;
+        bottom: 10px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .banner .regForm .securityPartners {
+        display: block;
+        bottom: 15px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .banner .regForm .securityPartners {
+        display: none;
     }
 }
 
@@ -353,6 +415,18 @@ body {
     }
 }
 
+@media only screen and (min-width: 768px) {
+    .banner .regForm .regForm-container .connectFB .security {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .banner .regForm .regForm-container .connectFB .security {
+        display: block;
+    }
+}
+
 .banner .regForm .regForm-container .connectFB .security ul li {
     width: 33%;
     display: table-cell;
@@ -423,6 +497,28 @@ body {
     }
 }
 
+.earnings-proof .earnings-proof-container .earning-slider .white-right {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 35px;
+    background: linear-gradient(to left, white, rgba(247, 247, 247, 0.5));
+    z-index: 99;
+}
+
+.earnings-proof .earnings-proof-container .earning-slider .white-left {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 35px;
+    background: linear-gradient(to right, white, rgba(247, 247, 247, 0.5));
+    z-index: 99;
+}
+
 .earnings-proof .earnings-proof-container .earning-item {
     width: 31.62393%;
     float: left;
@@ -451,6 +547,12 @@ body {
     border-bottom: 1px solid #d9d9d9;
 }
 
+@media only screen and (max-width: 767px) {
+    .earnings-proof .earnings-proof-container .earning-item .earning-image {
+        height: 230px;
+    }
+}
+
 .earnings-proof .earnings-proof-container .earning-item .earning-image img {
     width: 100%;
 }
@@ -466,6 +568,12 @@ body {
 
 .earnings-proof .earnings-proof-container .earning-item .earning-details:after {
     clear: both;
+}
+
+@media only screen and (max-width: 767px) {
+    .earnings-proof .earnings-proof-container .earning-item .earning-details {
+        padding: 12px;
+    }
 }
 
 .earnings-proof .earnings-proof-container .earning-item .earning-details .earning-amount {
@@ -501,6 +609,13 @@ body {
 .earnings-proof .earnings-proof-container .earning-item .earning-details .earning-name-photo {
     display: table-cell;
     vertical-align: middle;
+    width: 45px;
+}
+
+@media only screen and (max-width: 767px) {
+    .earnings-proof .earnings-proof-container .earning-item .earning-details .earning-name-photo {
+        width: 35px;
+    }
 }
 
 .earnings-proof .earnings-proof-container .earning-item .earning-details .earning-name-photo img {
@@ -663,26 +778,53 @@ body {
 }
 
 .survey-companies .companies {
-    width: 900px;
+    width: 100%;
+    max-width: 900px;
     margin: 0 auto;
+    padding: 0 15px;
+    overflow: hidden;
 }
 
 .survey-companies .companies .img {
-    display: table-cell;
-    vertical-align: middle;
     text-align: center;
+}
+
+.survey-companies .companies .img::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
 
 .survey-companies .companies .img img {
     display: block;
     max-width: 110px;
     margin: auto;
+    width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+@media only screen and (min-width: 768px) {
+    .survey-companies .companies .img img {
+        max-width: 90px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .survey-companies .companies .img img {
+        min-width: 40px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
     .survey-companies .companies .img {
         margin: 0 35px;
     }
+}
+
+.survey-companies .companies .slick-track {
+    height: 120px;
 }
 
 .benefits {
