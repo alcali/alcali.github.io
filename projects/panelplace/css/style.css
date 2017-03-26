@@ -168,6 +168,10 @@ img {
     }
 }
 
+.banner .banner-container .logo {
+    padding: 0;
+}
+
 .banner .banner-container .logo img {
     display: block;
     width: 190px;
