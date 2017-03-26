@@ -196,6 +196,7 @@ img {
 @media only screen and (max-width: 767px) {
     .banner .banner-container p {
         color: #ffffff;
+        margin-bottom: 115px;
     }
 }
 
