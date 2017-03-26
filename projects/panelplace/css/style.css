@@ -132,6 +132,7 @@ img {
 
 .header .header-logo {
     width: 190px;
+    float: left;
 }
 
 .header .header-logo img {
