@@ -411,12 +411,12 @@ img {
     font-size: 1rem;
     line-height: 37.7px;
     line-height: 1.45rem;
-    display: none;
+    display: block;
 }
 
 .banner .regForm .regForm-container .connectFB .connectFB-btn:hover {
-    background-color: #3B5998;
-    color: #ffffff;
+    background-color: #3B5998 !important;
+    color: #ffffff !important;
 }
 
 @media only screen and (max-width: 767px) {
