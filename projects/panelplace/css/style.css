@@ -168,6 +168,12 @@ img {
     }
 }
 
+.banner .banner-container .logo img {
+    display: block;
+    width: 190px;
+    height: auto;
+}
+
 .banner .banner-container h1 {
     color: #000000;
     font-size: 56px;
