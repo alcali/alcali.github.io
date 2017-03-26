@@ -130,6 +130,14 @@ img {
     top: 0;
 }
 
+.header .header-logo {
+    width: 190px;
+}
+
+.header .header-logo img {
+    display: block;
+}
+
 .header .headerSignUp {
     float: right;
 }
@@ -169,7 +177,7 @@ img {
 }
 
 .banner .banner-container .logo {
-    padding: 13px 0 !important;
+    padding: 9px 0 !important;
 }
 
 .banner .banner-container .logo img {
