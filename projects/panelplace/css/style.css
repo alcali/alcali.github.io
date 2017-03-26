@@ -169,7 +169,7 @@ img {
 }
 
 .banner .banner-container .logo {
-    padding: 0;
+    padding: 13px 0;
 }
 
 .banner .banner-container .logo img {
@@ -211,7 +211,7 @@ img {
 }
 
 .banner .banner-container .center-block {
-    padding: 194px 0;
+    padding: 181px 0;
 }
 
 @media only screen and (max-width: 767px) {
