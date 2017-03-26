@@ -164,7 +164,7 @@ img {
 @media only screen and (max-width: 767px) {
     .banner .banner-container {
         background: #1C95D4;
-        height: 320px;
+        height: auto;
     }
 }
 
