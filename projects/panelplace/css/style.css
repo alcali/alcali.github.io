@@ -222,6 +222,10 @@ img {
     height: 500px;
 }
 
+.banner .banner-container.alt .center > p {
+    padding-bottom: 0;
+}
+
 @media only screen and (max-width: 767px) {
     .banner .banner-container {
         background: #1C95D4;
@@ -268,6 +272,7 @@ img {
     line-height: 46.4px;
     line-height: 1.78462rem;
     font-family: 'robotoregular', sans-serif;
+    max-width: 675px;
 }
 
 @media only screen and (max-width: 767px) {
