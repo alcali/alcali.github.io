@@ -144,3 +144,4 @@
       else{
         $header.removeClass("hide-header");
       }
+    }
